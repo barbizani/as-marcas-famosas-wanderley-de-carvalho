@@ -57,7 +57,6 @@ export const materials = [
       "Parafusadeiras",
       "Furadeiras, marteletes e chaves de impacto",
 
-      "Brocas",
       "Sopradores, lavadoras e aparador de grama",
 
       "Ferramentas manuais",
