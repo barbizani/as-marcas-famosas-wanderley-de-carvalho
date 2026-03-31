@@ -60,9 +60,6 @@ export const materials = [
       "Brocas",
       "Sopradores, lavadoras e aparador de grama",
 
-      "Soldas",
-      "Discos",
-      "Ferro e aço",
       "Ferramentas manuais",
       "Jogos de ferramentas",
       "Jogos de soquetes",
