@@ -7,6 +7,8 @@ import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astr
 import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import { CONTACT } from "@/data_files/constants";
 
 // Define the variables that will be used in this component
 const title: string = "Entre em contato conosco";
@@ -140,12 +142,27 @@ const formSubTitle: string = "Retornaremos em breve.";
 
         <ContactIconBlock
           heading="Contato por e-mail"
-          content="Prefere o contato por e-mail? Envie-nos uma mensagem para:"
+          content="Prefere o contato por e-mail? Respondemos os emails com informações mais detalhadas dentro de 48h."
           isLinkVisible={true}
           linkTitle="wanderley@asmarcasfamosas.com.br"
           linkURL="mailto:wanderley@asmarcasfamosas.com.br"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>
+
+        <div class="flex gap-x-7 py-6">
+          <Icon name="whatsApp" />
+          <div class="grow">
+            <h3 class="font-bold text-neutral-700 dark:text-neutral-300">
+              Fale direto por WhatsApp agora:
+            </h3>
+            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+              Respondemos os contatos de WhatsApp com mais agilidade.
+            </p>
+            <div class="mt-4">
+              <PrimaryCTA title="Chamar no WhatsApp" url={CONTACT.whatsApp} icon="whatsApp" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
