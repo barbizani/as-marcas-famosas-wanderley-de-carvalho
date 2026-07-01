@@ -92,14 +92,16 @@ const formSubTitle: string = "Retornaremos em breve.";
               statusText.style.color = "#ea580c"; // Laranja/Aviso
 
               try {
-                const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw6_MmzTp-mC3ug71Y9HSmGw3DitJW7aEu5HbyqN9mJubnwB_VNX8TUhoVJylm2-zL8/exec";
                 const formData = new FormData(form);
                 
-                await fetch(GOOGLE_SCRIPT_URL, {
+                const res = await fetch("/api/contact", {
                   method: "POST",
                   body: formData,
-                  mode: "no-cors" // Google Scripts requerem no-cors em HTML estático
+                  // Removed no-cors because we are calling our own API
                 });
+
+                if (!res.ok) throw new Error("Erro na rede");
+
 
                 statusText.innerHTML = "Mensagem enviada com sucesso!<br/>Entraremos em contato em breve.";
                 statusText.style.color = "green";

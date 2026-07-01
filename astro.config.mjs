@@ -3,12 +3,13 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
-import vercel from "@astrojs/vercel/static";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://wanderley.vercel.app", // 👈 Substitua pelo seu domínio final
+  output: "hybrid",
   adapter: vercel(),
   image: {
     domains: ["images.unsplash.com"],
