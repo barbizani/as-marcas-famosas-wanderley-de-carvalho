@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import gacVertical from "@images/GAC_VERTICAL (1) (4).png";
-import sinVertical from "@images/SIN_VERTICAL (1) copy.png";
+import acoLight from "@images/Aço Cearense_horzi_Mono.png";
+import acoDark from "@images/Aço Cearense_horzi_Negativo.png";
+import sinoLight from "@images/Sinobras_mono_horiz.png";
+import sinoDark from "@images/Sinobras_negat_horiz.png";
 import sanseiLight from "@images/sansei-light.png";
 import sanseiDark from "@images/sansei-dark.png";
 import inprell from "@images/logotipo-inprell-orange.png";
@@ -38,15 +40,29 @@ interface Props {
     class="flex flex-col items-center justify-center gap-y-6 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
   >
     <!-- Clients Group Images -->
+    <!-- Aço Cearense (light mode) -->
     <Image
-      src={gacVertical}
-      alt="Parceiro GAC Vertical"
-      class="mx-auto h-auto w-24 py-3 sm:mx-0 lg:w-32 lg:py-5 object-contain"
+      src={acoLight}
+      alt="Parceiro Aço Cearense"
+      class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5 object-contain dark:hidden"
     />
+    <!-- Aço Cearense (dark mode) -->
     <Image
-      src={sinVertical}
-      alt="Parceiro SIN Vertical"
-      class="mx-auto h-auto w-24 py-3 sm:mx-0 lg:w-32 lg:py-5 object-contain"
+      src={acoDark}
+      alt="Parceiro Aço Cearense"
+      class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5 object-contain hidden dark:block"
+    />
+    <!-- Sinobras (light mode) -->
+    <Image
+      src={sinoLight}
+      alt="Parceiro Sinobras"
+      class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5 object-contain dark:hidden"
+    />
+    <!-- Sinobras (dark mode) -->
+    <Image
+      src={sinoDark}
+      alt="Parceiro Sinobras"
+      class="mx-auto h-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5 object-contain hidden dark:block"
     />
     <!-- Sansei Talhas (light mode) -->
     <Image
